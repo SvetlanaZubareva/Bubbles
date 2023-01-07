@@ -8,13 +8,13 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-  /* @font-face {
-   font-family: "RF Dewi";
+  @font-face {
+   font-family: "Times New Roman";
    font-style: normal;
    font-weight: 400;
-   src: url("./font/RFDewi-Black.woff2") format("woff2");
+   src: url("./fonts/times_new_roman.woff2") format("woff2");
    font-display: swap;
- } */
+ }
   
   html {
     height: 100%;
@@ -23,9 +23,9 @@
   
   body {
     min-height: 100%;
-    font-family: "RF Dewi";
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
-    line-height: 32px;
+    line-height: 22px;
     font-weight: 400;
     color: #0B101B;
     background-color: #ffff;
@@ -37,4 +37,42 @@
   button,
   a{
    cursor: pointer;
+   text-decoration: none;
+   color: black;
+  }
+  li{
+    list-style: none;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  .header__ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header{
+    padding: 30px 10% 30px;
+  }
+  .header__li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .header__li:nth-child(4){
+    width: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__li:nth-child(4):hover{
+    background-color: red;
   }
