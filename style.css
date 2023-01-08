@@ -151,6 +151,9 @@
 .header-section--open{
   display: block;
 }
-.header-section__input._error{
+/* .header-section__input._error{
+  box-shadow: 0 0 15px red;
+} */
+._error{
   box-shadow: 0 0 15px red;
 }

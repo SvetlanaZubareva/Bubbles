@@ -36,14 +36,14 @@
         </ul>
         <section class="header-section header-section--closed ">
             <div class="header-section__div">
-                <form action="./sendmail.php" id="form">
+                <form action="send.php" method="POST">
                     <h2 class="header-section__h2">Проверьте свою дату</h2>
                     <p class="header-section__p">Оставьте свой номер телефона, наш консультант перезвонит  Вам и расскажет о возможных сценариях Вашего мероприятия в нужную вам дату</p>
-                    <input name="data" class="header-section__input" type="date" value placeholder="12.01.2023">
-                    <input name="name" class="header-section__input" type="text" placeholder="Как Вас зовут?">
-                    <input name="tel" class="header-section__input  _tel" type="tel" placeholder="Номер телефона">
-                    <input name="clock" class="header-section__input" type="text" placeholder="Когда Вам будет удобно принять звонок?">
-                    <button class="header-section__button button" type="submit">Жду звонка</button>
+                    <input name="date" class="header-section__input _req" type="date" value placeholder="12.01.2023">
+                    <input name="name" class="header-section__input _req" type="text" placeholder="Как Вас зовут?">
+                    <input name="tel" class="header-section__input _req  _tel" type="tel" placeholder="Номер телефона">
+                    <input name="clock" class="header-section__input _req" type="text" placeholder="Когда Вам будет удобно принять звонок?">
+                    <button class="header-section__button button btn" type="submit">Жду звонка</button>
                     <p class="header-section__p">Мы Вам перезвоним</p>
                 </form>
             </div>
