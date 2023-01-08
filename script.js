@@ -1,17 +1,17 @@
-const button = document.querySelector(".header__li-button")
-const modal = document.querySelector(".header-section")
+// const button = document.querySelector(".header__li-button")
+// const modal = document.querySelector(".header-section")
 
-modal.classList.remove('main-nav--nojs');
+// modal.classList.remove('main-nav--nojs');
 
-button.addEventListener("click", function(){
-    if (modal.classList.contains("header-section--closed")){
-        modal.classList.remove("header-section--closed");
-        modal.classList.add("header-section--open");
-    } else {
-        modal.classList.add("header-section--closed")
-        modal.classList.remove("header-section--open");
-    }
-});
+// button.addEventListener("click", function(){
+//     if (modal.classList.contains("header-section--closed")){
+//         modal.classList.remove("header-section--closed");
+//         modal.classList.add("header-section--open");
+//     } else {
+//         modal.classList.add("header-section--closed")
+//         modal.classList.remove("header-section--open");
+//     }
+// });
 
 
 
