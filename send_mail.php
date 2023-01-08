@@ -1,42 +1,43 @@
 <?php
-//Внутри него подключаем библиотеку PHPMailer. Вставляем код ниже. Важно, чтобы файлы библиотеки находились в папке PHPMailer.
+
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
     require "PHPMailer/src/Exception.php";
     require "PHPMailer/src/PHPMailer.php";
-//Далее создадим объект mail для работы с почтой и считаем поля формы с файла index.html. Передаем данные методом POST.
-$mail = new PHPMailer(true); /* Создаем объект MAIL */
-$mail->CharSet = "UTF-8"; /* Задаем кодировку UTF-8 */
-$mail->IsHTML(true); /* Разрешаем работу с HTML */
 
-$name = $_POST["name"]; /* Принимаем имя пользователя с формы .. */
-$email = $_POST["email"]; /* Почту */
-$phone = $_POST["phone"]; /* Телефон */
-$message = $_POST["message"]; /* Сообщение с формы */
-$email_template = "template_mail.html"; // Считываем файл разметки
-$body = file_get_contents($email_template); // Сохраняем данные в $body
-$body = str_replace('%name%', $name, $body); // Заменяем строку %name% на имя
-$body = str_replace('%email%', $email, $body); // строку %email% на почту
-$body = str_replace('%phone%', $phone, $body); // строку %phone% на телефон
-$body = str_replace('%message%', $message, $body); // строку %message% на сообщение
-$mail->addAddress("se.berseneva@gmail.com"); /* Здесь введите Email, куда отправлять */
-$mail->setFrom($email);
-$mail->Subject = "[Заявка с формы]"; /* Тема письма */
-$mail->MsgHTML($body);
+    $mail = new PHPMailer(true);
+	
+    $mail->CharSet = "UTF-8";
+    $mail->IsHTML(true);
 
-/* Проверяем отправлено ли сообщение */
-if (!$mail->send()) {
-  $message = "Ошибка отправки";
-} else {
-  $message = "Данные отправлены!";
-}
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+	$phone = $_POST["phone"];
+    $message = $_POST["message"];
+	$email_template = "template_mail.html";
 
-/* Возвращаем ответ */	
-$response = ["message" => $message];
+    $body = file_get_contents($email_template);
+	$body = str_replace('%name%', $name, $body);
+	$body = str_replace('%email%', $email, $body);
+	$body = str_replace('%phone%', $phone, $body);
+	$body = str_replace('%message%', $message, $body);
 
-/* Ответ в формате JSON */
-header('Content-type: application/json');
-echo json_encode($response);
+    $mail->addAddress("se.berseneva@gmail.com");   // Здесь введите Email, куда отправлять
+	$mail->setFrom($email);
+    $mail->Subject = "[Заявка с формы]";
+    $mail->MsgHTML($body);
+
+    if (!$mail->send()) {
+        $message = "Ошибка отправки";
+    } else {
+        $message = "Данные отправлены!";
+    }
+	
+	$response = ["message" => $message];
+
+    header('Content-type: application/json');
+    echo json_encode($response);
+
 
 ?>
