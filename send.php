@@ -11,11 +11,11 @@ $tel = urlencode($tel);
 $name = trim($name);
 $tel = trim($tel);
 
-if (mail("to_mail@mail.ru",
+if (mail("se.berseneva@gmail.com",
      "Pest Reject",
      "Имя: ".$name."\n".
      "Телефон ".$tel,
-     "From: script@mail.ru \r\n")
+     "From: se.berseneva@gmail.com \r\n")
 ){
      header("Location: /thank_you.html");
 }
