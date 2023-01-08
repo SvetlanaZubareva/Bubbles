@@ -8,7 +8,7 @@
     <title>Пузыри</title>
     <script>
     (function () { var widget = document.createElement('script'); widget.dataset.pfId = 'df65cfee-131a-4e09-b376-62da0162ac5e'; widget.src = 'https://widget.profeat.team/script/widget.js?id=df65cfee-131a-4e09-b376-62da0162ac5e&now='+Date.now(); document.head.appendChild(widget); })()
-    </script>
+    </script> 
 </head>
 <body>
     <header class="header">
@@ -30,12 +30,27 @@
                     <a href="tel:+79219009797">+79219009797</a>
                 </span>
             </li>
-            <li class="header__li">
+            <li class="header__li header__li-button main-nav--nojs">
                 Забронировать
             </li>
         </ul>
-        
+        <section class="header-section header-section--closed ">
+            <div class="header-section__div">
+                <form action="./sendmail.php" id="form">
+                    <h2 class="header-section__h2">Проверьте свою дату</h2>
+                    <p class="header-section__p">Оставьте свой номер телефона, наш консультант перезвонит  Вам и расскажет о возможных сценариях Вашего мероприятия в нужную вам дату</p>
+                    <input name="data" class="header-section__input" type="date" value placeholder="12.01.2023">
+                    <input name="name" class="header-section__input" type="text" placeholder="Как Вас зовут?">
+                    <input name="tel" class="header-section__input  _tel" type="tel" placeholder="Номер телефона">
+                    <input name="clock" class="header-section__input" type="text" placeholder="Когда Вам будет удобно принять звонок?">
+                    <button class="header-section__button button" type="submit">Жду звонка</button>
+                    <p class="header-section__p">Мы Вам перезвоним</p>
+                </form>
+            </div>
+        </section>
     </header>
+    <script src="./script.js">
+    </script>
     
 </body>
 </html>
