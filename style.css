@@ -157,3 +157,15 @@
 ._error{
   box-shadow: 0 0 15px red;
 }
+.header__a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__a:hover{
+  fill: #9f1a15;
+  color: #9f1a15;
+}
+.header__span{
+  font-size: 30px;
+}
