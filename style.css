@@ -67,6 +67,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-size: calc(10px + 10 * (100vw / 1555));
   }
   .header__li:nth-child(4){
     width: 150px;
