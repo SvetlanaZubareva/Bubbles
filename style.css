@@ -29,7 +29,7 @@
     font-weight: 400;
     color: #0B101B;
     background-color: #ffff;
-    min-width: 375px;
+    min-width: 320px;
     max-width: 100%;
     margin: 0 auto;
     overflow-x: hidden;
@@ -46,6 +46,8 @@
   }
   li{
     list-style: none;
+    margin-right: 10px;
+    margin-bottom: 20px;
   }
   ul{
     margin: 0;
@@ -167,5 +169,7 @@
   color: #9f1a15;
 }
 .header__span{
-  font-size: 30px;
+  /* font-size: 150px; */
+  font-size: calc(30px + 120 * (100vw / 1555));
 }
+  
