@@ -69,7 +69,7 @@
     cursor: pointer;
     font-size: calc(10px + 10 * (100vw / 1555));
   }
-  .header__li:nth-child(4){
+  .header__li:nth-child(3){
     width: 150px;
     padding: 10px;
     box-sizing: border-box;
@@ -80,7 +80,7 @@
     align-items: center;
   }
 
-  .header__li:nth-child(4):hover{
+  .header__li:nth-child(3):hover{
     background-color: #9f1a15;
     color: #ffff;
   }
@@ -169,8 +169,12 @@
   fill: #9f1a15;
   color: #9f1a15;
 }
-.header__span{
+.header__h1{
   /* font-size: 150px; */
+  font-weight: 400;
   font-size: calc(30px + 120 * (100vw / 1555));
 }
+
+
+
   
