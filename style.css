@@ -81,8 +81,9 @@
   }
 
   .header__li:nth-child(3):hover{
-    background-color: #9f1a15;
+    background-color: #8c72ec;
     color: #ffff;
+    border: 2px solid #fff;
   }
   .header-section{
     display: flex;
@@ -111,12 +112,13 @@
     align-items: center;
     width: 500px;
     box-shadow: 0px 0px 48px rgb(106 108 138 / 8%);
+    box-shadow: 0px 0px 100px rgb(242 243 247);
     padding: 50px 30px 30px;
     margin-left: auto;
     margin-right: auto;
 }
 .header-section__h2{
-  color: #9f1a15;
+  color: #8c72ec;
   font-size: 50px;
   margin-bottom: 30px;
 }
@@ -125,8 +127,8 @@
   margin-bottom: 20px;
 }
 .header-section__button{
-  color: #9f1a15;
-  border: 2px solid #9f1a15;
+  color: #8c72ec;
+  border: 2px solid #8c72ec;
   width: 100%;
   border-radius: 20px;
   background-color: #ffff;
@@ -136,7 +138,7 @@
   margin-bottom: 20px;
 }
 .header-section__button:hover{
-  background-color: #9f1a15;
+  background-color: #8c72ec;
   color: #ffff;
 }
 .header-section__input{
@@ -166,8 +168,8 @@
   align-items: center;
 }
 .header__a:hover{
-  fill: #9f1a15;
-  color: #9f1a15;
+  fill: #fff;
+  color: #fff;
 }
 .header__h1{
   /* font-size: 150px; */
@@ -176,5 +178,115 @@
 }
 
 
+/*Вариант стилей для анимированного фона
+/* html, body {
+  width: 100%;
+  height:100%;
+}
 
-  
+body {
+    background: linear-gradient(-45deg, #8dbe3e, #ecd3dd, #8fc9df, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+
+body {
+  background-color: #ffff;
+  /* Webkit */
+  background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 40, from(white), color-stop(0.1, rgba(248,255,128,.5)), to(transparent) );
+  /* Firefox */
+  background-image: -moz-radial-gradient(circle, #FFFFFF 2px, rgba(248,255,128,.5) 4px, transparent 40px);
+}
+body {
+  background-color: #ffff;
+  /* Webkit */
+  background-image:
+     -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 40, from(white), color-stop(0.1, rgba(248,255,128,.5)), to(transparent)),
+     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 30, from(white), color-stop(0.1, rgba(255,186,170,.4)), to(transparent)),
+     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 40, from(rgba(255,255,255,.9)), color-stop(0.05, rgba(251,255,186,.3)), to(transparent)),
+     -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 30, from(rgba(255,255,255,.4)), color-stop(0.03, rgba(253,255,219,.2)), to(transparent));
+  /* Firefox */
+  background-image:
+     -moz-radial-gradient(circle, #FFFFFF 2px, rgba(248,255,128,.5) 4px, transparent 40px),
+     -moz-radial-gradient(circle, #FFFFFF 1px, rgba(255,186,170,.4) 3px, transparent 30px),
+     -moz-radial-gradient(circle, rgba(255,255,255,.9) 1px, rgba(251,255,186,.3) 2px, transparent 40px),
+     -moz-radial-gradient(circle, rgba(255,255,255,.4), rgba(253,255,219,.2) 1px, transparent 30px);
+  /* Background images size */
+  background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+  /* Background images position*/
+  background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+}
+body {
+  background-color: rgb(163, 195, 243);
+  /* Firefox */
+  background-image:
+     -moz-radial-gradient(circle, #FFFFFF 2px, rgba(248,255,128,.5) 4px, transparent 40px),
+     -moz-radial-gradient(circle, #FFFFFF 1px, rgba(255,186,170,.4) 3px, transparent 30px),
+     -moz-radial-gradient(ellipse, rgba(255,255,255,.9) 1px, rgba(251,255,186,.3) 2px, transparent 40px),
+     -moz-radial-gradient(ellipse, rgba(255,255,255,.4), rgba(253,255,219,.2) 1px, transparent 30px);
+  /* Webkit */
+  background-image:
+     -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 40, from(white), color-stop(0.1, rgba(248,255,128,.5)), to(transparent)),
+     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 30, from(white), color-stop(0.1, rgba(255,186,170,.4)), to(transparent)),
+     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 40, from(rgba(255,255,255,.9)), color-stop(0.05, rgba(251,255,186,.3)), to(transparent)),
+     -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 30, from(rgba(255,255,255,.4)), color-stop(0.03, rgba(253,255,219,.2)), to(transparent));
+  /* Background Attributes */
+  background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+  background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+  /* Animation */
+  animation-name: movement;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /* Firefox */
+  -moz-animation-name: movement;
+  -moz-animation-duration: 5s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  /* Webkit */
+  -webkit-animation-name: movement;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes movement
+{
+  from {
+        background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+  }
+  to {
+        background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+  }
+}
+@-moz-keyframes movement
+{
+  from {
+        background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+  }
+  to {
+        background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+  }
+}
+@-webkit-keyframes movement
+{
+  from {
+        background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+  }
+  to {
+        background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+  }
+}
+
