@@ -294,7 +294,7 @@ body {
 
 @media(max-width:765px) {
   .header-section__div{
-    width: 250px;
+    width: 200px;
   }
   .header-section__h2 {
     font-size: 30px;
