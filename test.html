@@ -4,11 +4,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href = "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"  rel = "stylesheet" >
     <title>Аренда Иглу в Санкт-Петербурге от 500р/в час. В зелёной зоне Кудрово, парк Косая гора/ ПУЗЫРИ</title>
     <meta name="description" content="Аренда купола Иглу в Санкт-Петербурге. Вместимость одного домика до 12 человек. Удобные диваны/кресла и большой стол." />
     <script>
     (function () { var widget = document.createElement('script'); widget.dataset.pfId = 'df65cfee-131a-4e09-b376-62da0162ac5e'; widget.src = 'https://widget.profeat.team/script/widget.js?id=df65cfee-131a-4e09-b376-62da0162ac5e&now='+Date.now(); document.head.appendChild(widget); })()
     </script>
+
+
+
 </head>
 <body>
     <header class="header">
@@ -62,7 +66,9 @@
               <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">Второе преимущество</span></div>
               <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">Третье преимущество</span></div>
             </div>
-          </figure>
+        </figure>
+        
+        
           <script>
             function classToggle() {
   var el = document.querySelector('.icon-cards__content');
@@ -71,6 +77,80 @@
 
 document.querySelector('#toggle-animation').addEventListener('click', classToggle);
           </script>
+
+
+
+
+          <section class="section-test">
+            <div>
+                <h1>Преимущества</h1>
+                <p>1</p>
+            </div>
+            <div class="wrapper">
+                <div class="slider">
+                  <img class="active" src="http://wallpapers-image.ru/1920x1080/castles/wallpapers/wallpapers-castles-31.jpg">
+                  <img src="./triple-set-desktop.jpg">
+                  <img src="./triple-set-desktop.jpg">
+                </div>
+                <nav class="slider-nav">
+                  <ul>
+                    <li class="arrow">
+                      <a class="previous">
+                        <span>
+                          <i class="ion-arrow-left-c"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="arrow">
+                      <a class="next">
+                        <span>
+                          <i class="ion-arrow-right-c"></i>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div> 
+                   <script>
+                    const items = document.querySelectorAll('img');
+            const itemCount = items.length;
+            const nextItem = document.querySelector('.next');
+            const previousItem = document.querySelector('.previous');
+            let count = 0;
+            
+            function showNextItem() {
+              items[count].classList.remove('active');
+            
+              if(count < itemCount - 1) {
+                count++;
+              } else {
+                count = 0;
+              }
+            
+              items[count].classList.add('active');
+              console.log(count);
+            }
+            
+            function showPreviousItem() {
+              items[count].classList.remove('active');
+            
+              if(count > 0) {
+                count--;
+              } else {
+                count = itemCount - 1;
+              }
+            
+              items[count].classList.add('active');
+              console.log(count);
+            }
+            
+            nextItem.addEventListener('click', showNextItem);
+            previousItem.addEventListener('click', showPreviousItem);
+                   </script>   
+          </section>
+
+
+
     </main>
     <footer style="padding-top: 1000px;">
         gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
