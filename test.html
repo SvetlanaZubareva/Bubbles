@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html lang="ru">
-<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,106 @@
     <meta name="description" content="Аренда купола Иглу в Санкт-Петербурге. Вместимость одного домика до 12 человек. Удобные диваны/кресла и большой стол." />
     <script>
     (function () { var widget = document.createElement('script'); widget.dataset.pfId = 'df65cfee-131a-4e09-b376-62da0162ac5e'; widget.src = 'https://widget.profeat.team/script/widget.js?id=df65cfee-131a-4e09-b376-62da0162ac5e&now='+Date.now(); document.head.appendChild(widget); })()
-    </script> 
+    </script>
+    <style>
+       
+
+.icon-cards {
+  position: relative;
+	width: 60vw;
+	height: 40vw;
+  max-width: 380px;
+  max-height: 250px;
+  margin: 0;
+  color: white;
+	perspective: 1000px;
+  transform-origin: center;
+}
+
+.icon-cards__content{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+    transform-origin: center;
+		transform-style: preserve-3d;
+		transform: translateZ(-30vw) rotateY(0);
+		animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.icon-cards__item .step-animation{
+      animation: carousel 8s infinite steps(1) forwards;
+
+	}
+
+
+	.icon-cards__item {
+		position: absolute;
+		top: 0;
+		left: 0;
+    right: 0;
+    bottom: 0;
+		width: 60vw;
+		height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    /* box-shadow: 0 5px 20px rgba(0,0,0,.1); */
+		border-radius: 6px;
+    transform-origin: center;
+    }
+    .icon-cards__item:nth-child(1) {
+			background: #FDD94F;
+			transform: rotateY(0) translateZ(35vw);
+		}
+
+		.icon-cards__item:nth-child(2) {
+			background: #F87949;
+			transform: rotateY(120deg) translateZ(35vw);
+		}
+
+		.icon-cards__item:nth-child(3) {
+			background: #FBAB48;
+			transform: rotateY(240deg) translateZ(35vw);
+		}
+
+
+
+
+@keyframes carousel {
+	0%,  17.5%  { transform: translateZ(-35vw) rotateY(0); }
+	27.5%, 45%  { transform: translateZ(-35vw) rotateY(-120deg); }
+	55%, 72.5%  { transform: translateZ(-35vw) rotateY(-240deg); }
+	82.5%, 100% { transform: translateZ(-35vw) rotateY(-360deg); }
+}
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+
+
+
+@keyframes jelly {
+  from { transform: scale(1, 1); }
+  30% { transform: scale(1.25, 0.75); }
+  40% { transform: scale(0.75, 1.25); }
+  50% { transform: scale(1.15, 0.85); }
+  65% { transform: scale(0.95, 1.05); }
+  75% { transform: scale(1.05, 0.95); }
+  to { transform: scale(1, 1); }
+}
+
+    </style>
 </head>
 <body>
     <header class="header">
@@ -57,12 +155,25 @@
         </section>
     </header>
     <main>
-        
-          
+        <figure class="icon-cards mt-3">
+            <div class="icon-cards__content">
+              <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">🙂</span></div>
+              <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">😊</span></div>
+              <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">😀</span></div>
+            </div>
+          </figure>
+          <script>
+            function classToggle() {
+  var el = document.querySelector('.icon-cards__content');
+  el.classList.toggle('step-animation');
+}
+
+document.querySelector('#toggle-animation').addEventListener('click', classToggle);
+          </script>
     </main>
     
     <script src="./script.js">
     </script>
 
 </body>
-</html> 
+</html>

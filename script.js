@@ -17,10 +17,6 @@ button.addEventListener("click", function(){
 
 
 
-
-
-
-
 // const form = document.forms["form"];
 // const formArr = Array.from(form);
 // const validFormArr = [];
