@@ -60,7 +60,11 @@
     align-items: center;
   }
   .header{
-    padding: 30px 10% 30px;
+    padding: 0 10% 0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: rgb(163, 195, 243);
   }
   .header__li{
     display: flex;
@@ -305,6 +309,8 @@ body {
   color: white;
 	perspective: 2000px;
   transform-origin: center;
+  margin-top: 300px;
+  margin-bottom: 200px;
 }
 
 .icon-cards__content{
@@ -514,7 +520,6 @@ a.next span:hover i {
 
 img {
   max-width: 100%;
-  display: none;
   -webkit-box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
   -moz-box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
   box-shadow: 10px 10px 20px 0 rgba(94,47,59,0.2);
@@ -579,4 +584,51 @@ img.active {
   align-items: center;
   width: 100%;
   padding: 100px;
+}
+.main-section__h2{
+  font-size: 100px;
+  margin-bottom: 200px;
+}
+.main-section__h3{
+  font-size: 50px;
+  margin: 0 0 20px;
+  margin-bottom: 50px;
+}
+.main-section{
+  padding: 0 5% 100px;
+}
+.main-section__div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  margin-bottom: 100px;
+}
+.main-section__p{
+  line-height: 30px;
+}
+.div-price{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5%;
+}
+.main-section__p{
+  margin-bottom: 20px;
+}
+.div-price__p{
+  line-height: 30px;
+}
+.square-animation{
+  animation: myAnim 1s ease 0s 1 normal forwards;
+
+}
+@keyframes myAnim {
+	0% {
+		transform: scaleX(0.4);
+		transform-origin: 0% 0%;
+	}
+
+	100% {
+		transform: scaleX(1);
+		transform-origin: 0% 0%;
+	}
 }

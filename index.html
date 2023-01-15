@@ -38,10 +38,10 @@
                 </a>
             </li>
             <li class="header__li header__li-button main-nav--nojs">
-                Забронировать
+                <a class="header__a" href="https://wa.me/89219009797">Забронировать</a>
             </li>
         </ul>
-        <section class="header-section header-section--closed ">
+        <!-- <section class="header-section header-section--closed ">
             <div class="header-section__div">
                 <form action="#" method="POST">
                     <h2 class="header-section__h2">Проверьте свою дату</h2>
@@ -49,18 +49,118 @@
                     <input name="date" class="header-section__input _req" type="date" value placeholder="12.01.2023">
                     <input name="name" class="header-section__input _req" type="text" placeholder="Как Вас зовут?">
                     <input name="tel" class="header-section__input _req  _tel" type="tel" placeholder="Номер телефона">
-                    <!-- <input name="clock" class="header-section__input _req" type="text" placeholder="Когда Вам будет удобно принять звонок?"> -->
-                    <button class="header-section__button button btn" type="submit">Жду звонка</button>
+                    <input name="clock" class="header-section__input _req" type="text" placeholder="Когда Вам будет удобно принять звонок?"> -->
+                    <!-- <button class="header-section__button button btn" type="submit">Жду звонка</button>
                     <p class="header-section__p">Мы Вам перезвоним</p>
                 </form>
             </div>
-        </section>
+        </section> --> 
     </header>
-    <main>
-        
-          
+    <main class="main">
+        <section>
+            <figure class="icon-cards mt-3">
+                <div class="icon-cards__content">
+                  <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">Первое преимущество</span></div>
+                  <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">Второе преимущество</span></div>
+                  <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">Третье преимущество</span></div>
+                </div>
+            </figure>
+        </section>
+         
+        <section class="main-section">
+            <h2 class="main-section__h2">
+                Немного подробнее о нас
+            </h2>
+            <div class="main-section__div">
+                <img class="main-section__img" src="./triple-set-desktop.jpg" alt="Фото" width="100%" height="400px">
+                <div class="main-section__div-description">
+                    <h3 class="main-section__h3">
+                        Что такое ПУЗЫРИ?
+                    </h3>
+                    <p class="main-section__p">
+                        Индивидуальные купольные зимние беседки, рассчитанные на компании до 12 человек. 
+                        Оборудованы электро-каминами для поддержания комфортной температуры. Внутри имеются удобные мягкие 
+                        кресла или диваны, большие столы.
+                    </p>
+                </div>
+            </div>
+            <div class="main-section__div">
+                <div class="main-section__div-description">
+                    <h3 class="main-section__h3" id="1">
+                        Что есть и пить?
+                    </h3>
+                    <p class="main-section__p" id="2">
+                        Вы можете заказать доставку, воспользоваться любым сервисом доставки.
+                         Можно даже принести с собой любые напитки и еду. 
+                         Дополнительно, по желанию, оплачивается использование мангала 500руб.
+                    </p>
+                </div>
+                <img class="main-section__img" src="./triple-set-desktop.jpg" alt="Фото" width="100%" height="400px">
+            </div>
+            <div class="main-section__div">
+                <img class="main-section__img" src="./triple-set-desktop.jpg" alt="Фото" width="100%" height="400px">
+                <div class="main-section__div-description">
+                    <h3 class="main-section__h3" id="3">
+                        Сколько стоит?
+                    </h3>
+                    <div>
+                        <p class="main-section__p" id="4">
+                            Стоимость аренды ПУЗЫРЯ в час (не с человека)
+                        </p>
+                        <div class="div-price">
+                            <p class="div-price__p" id="5">
+                                c 9:00 до 16:00 <br>
+                                ПН ВТ СР ЧТ ПТ <br>
+                                500 рублей
+                            </p>
+                            <p class="div-price__p" id="6">
+                                c 9:00 до 16:00 <br>
+                                СБ ВС <br>
+                                700 рублей
+                            </p>
+                            <p class="div-price__p" id="7">
+                                c 16:00 до 23:00 <br>
+                                ПН ВТ СР ЧТ ВС <br>
+                                1000 рублей
+                            </p>
+                            <p class="div-price__p" id="8">
+                                c 16:00 до 23:00 <br>
+                                ПТ СБ <br>
+                                1500 рублей
+                            </p>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
     </main>
-    
+    <script>
+        //Анимация при скроле
+        const observer = new IntersectionObserver(entries => {
+        // перебор записей
+        entries.forEach(entry => {
+            // если элемент появился
+            if (entry.isIntersecting) {
+            // добавить ему CSS-класс
+            entry.target.classList.add('square-animation');
+            }
+        });
+        });
+        observer.observe(document.querySelector('.main-section__h2')); 
+        observer.observe(document.querySelector('.main-section__p'));
+        observer.observe(document.querySelector('.main-section__h3'));
+        observer.observe(document.getElementById("1"));
+        observer.observe(document.getElementById("2"));
+        observer.observe(document.getElementById("3"));
+        observer.observe(document.getElementById("4"));
+        observer.observe(document.getElementById("5"));
+        observer.observe(document.getElementById("6"));
+        observer.observe(document.getElementById("7"));
+        observer.observe(document.getElementById("8"));
+    </script>
     <script src="./script.js">
     </script>
 
