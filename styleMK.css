@@ -55,6 +55,7 @@ margin-top: 100px;
 .MK-section__p-description{
     font-size: calc(10px + 20 * (100vw / 1555));
     line-height: calc(10px + 30 * (100vw / 1555));
+    margin-bottom: 20px;
 }
 .MK-section__span-description{
     font-size: calc(10px + 20 * (100vw / 1555));
@@ -72,7 +73,20 @@ margin-top: 100px;
     font-size: calc(10px + 20 * (100vw / 1555));
     border-radius: 20px;
     font-weight: bold;
+    margin-left: 2%;
 }
 .MK-section__button-description:hover{
     color: #f4e807;
 }
+@media(max-width:765px) {
+    .MK-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .MK-main__h2-one{
+        margin-top: 50px;
+    }
+    .MK-main{
+        margin-top: 50px;
+    }
+  }

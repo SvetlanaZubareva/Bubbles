@@ -74,6 +74,21 @@
             <span class="MK-section__span-description">Цена: 1000 pyблей</span>  
             <a class="MK-section__button-description" href="https://wa.me/+79811478827">Записаться</a>
         </section>
-    </main>  
+    </main>
+    <script>
+        //Анимация при скроле
+        const observer = new IntersectionObserver(entries => {
+        // перебор записей
+        entries.forEach(entry => {
+            // если элемент появился
+            if (entry.isIntersecting) {
+            // добавить ему CSS-класс
+            entry.target.classList.add('square-animation');
+            }
+        });
+        });
+        observer.observe(document.querySelector('.MK-main__h2')); 
+        observer.observe(document.querySelector('.MK-section'));
+    </script>  
 </body>
 </html> 
