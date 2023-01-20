@@ -123,6 +123,9 @@ margin-top: 100px;
         display: flex;
         flex-direction: column;
     }
+    .MK-section-one{
+        padding-top: 0;
+    }
     .MK-main__h2-one{
         margin-top: 50px;
     }
