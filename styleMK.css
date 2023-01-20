@@ -106,6 +106,18 @@ margin-top: 100px;
     transform: scale(1.5);
     cursor: pointer;
 } */
+.MK-section-img-one{
+    height: 700px;
+}
+.photo-section__photo-one{
+    padding: 0 5% 50px;
+    width: 100%;
+}
+.photo-section__photo-div-one{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 @media(max-width:765px) {
     .MK-section{
         display: flex;
