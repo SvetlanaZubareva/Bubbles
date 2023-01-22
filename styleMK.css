@@ -118,6 +118,18 @@ margin-top: 100px;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.photo-section__photo-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.photo-section__photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 @media(max-width:765px) {
     .MK-section{
         display: flex;
