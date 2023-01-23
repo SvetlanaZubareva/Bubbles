@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleMK.css">
+    <title>Аренда Иглу в Санкт-Петербурге от 500р/в час. В зелёной зоне Кудрово, парк Косая гора/ ПУЗЫРИ</title>
+    <meta name="description" content="Аренда купола Иглу в Санкт-Петербурге. Вместимость одного домика до 12 человек. Удобные диваны/кресла и большой стол." />
+</head>
+<body class="fev">
+    <header class="MK-main">
+        <h2 class="MK-main__h214">День всех влюбленных <br> в ПУЗЫРЯХ</h2>
+    </header>
+    <main>
+        <section class="MK-section">
+            <img class="MK-section-img14" src="./imgmk/cf49d432e5e9596430d0628371uf--kartiny-i-panno-kartiny-kartina-vlyublennye.jpg" alt="Рисунок">
+            <div>
+                <p class="MK-main__p">
+                    Мы  предлагаем Влюбленным воспользоваться шансом и побыть вдвоем, отодвинуть суету, 
+                    быт на второй план и вспомнить, что есть дорогой человек и время, проведенное вдвоем – бесценно!
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="MK-section--description14">
+        <p class="MK-section__p-description">
+            В этот день - 14 февраля – мы делаем скидку для пар с 16:00 аренда Иглу - 750 рублей за час. 
+            При заказе от 2 часов фотограф всего 500 рублей. Нажимай на кпопку "ЗАПИСАТЬСЯ", чтобы узнать подробнее!
+        </p>
+        <span class="MK-section__span-description14">Цена: от 750 pyблей</span>  
+        <a class="MK-section__button-description MK-section__button-description14" href="https://wa.me/+79811478827">ЗАПИСАТЬСЯ</a>
+    </footer>
+    
+    <script>
+        //Анимация при скроле
+        const observer = new IntersectionObserver(entries => {
+        // перебор записей
+        entries.forEach(entry => {
+            // если элемент появился
+            if (entry.isIntersecting) {
+            // добавить ему CSS-класс
+            entry.target.classList.add('square-animation');
+            }
+        });
+        });
+        observer.observe(document.querySelector('.MK-main__h2')); 
+        observer.observe(document.querySelector('.MK-section'));
+        observer.observe(document.querySelector('.MK-section-one'));
+        observer.observe(document.querySelector('.photo-section__photo-one'));
+    </script>  
+</body>
+</html> 
